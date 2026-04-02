@@ -1,0 +1,6 @@
+# Workspace 測試
+
+時間：2026-03-31 22:41
+狀態：✅ 外部磁碟 Workspace 正常運作
+
+路徑：`/Volumes/WorkData/ctbzai/openclaw-workspace`

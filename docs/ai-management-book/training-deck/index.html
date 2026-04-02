@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 管理學培訓教材</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <style>
+        .reveal { font-size: 32px; }
+        .reveal h1 { font-size: 2.2em; color: #1a1a2e; }
+        .reveal h2 { font-size: 1.6em; color: #16213e; }
+        .reveal h3 { font-size: 1.3em; color: #0f3460; }
+        .reveal ul { margin-left: 1em; }
+        .reveal li { margin: 0.5em 0; }
+        .reveal .highlight { background: #e94560; color: white; padding: 0.1em 0.3em; border-radius: 5px; }
+        .reveal .small-text { font-size: 0.7em; }
+        .reveal table { font-size: 0.8em; width: 100%; }
+        .reveal table th { background: #1a1a2e; color: white; }
+        .reveal table td, .reveal table th { padding: 0.4em; border: 1px solid #ddd; }
+        .reveal .two-col { display: flex; gap: 2em; }
+        .reveal .two-col > div { flex: 1; }
+        .reveal .cover { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; }
+        .reveal .cover h1 { color: white; font-size: 2.5em; }
+        .reveal .cover p { color: #a0a0a0; font-size: 1em; }
+    </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 封面 -->
+<section class="cover">
+    <h1>AI 管理學</h1>
+    <p>用管理框架馭 AI 能力</p>
+    <p style="margin-top: 2em; color: #a0a0a0;">草台班子研究室</p>
+</section>
+
+<!-- 課程目標 -->
+<section>
+    <h2>這堂課你要學什麼？</h2>
+    <ul>
+        <li>✅ 系統化使用 AI 的管理學框架</li>
+        <li>✅ 判斷什麼任務該交給 AI，什麼不該</li>
+        <li>✅ 設計高效 Prompt 的方法</li>
+        <li>✅ 建立防範 AI 風險的意識</li>
+        <li>✅ 持續改善的能力</li>
+    </ul>
+    <p class="highlight" style="margin-top: 1em;">核心觀念：標準比工具重要，系統思維強過工具思維</p>
+</section>
+
+<!-- 核心原則 -->
+<section>
+    <h2>第一原則：把 AI 當人</h2>
+    <p>用你希望同事怎麼跟你合作的方式，對待你的 AI。</p>
+    <table>
+        <tr><th>你希望同事</th><th>你該這樣對 AI</th></tr>
+        <tr><td>清楚說明背景</td><td>說明任務的 Context</td></tr>
+        <tr><td>明確目標</td><td>設定 O（目標）和 KR（關鍵成果）</td></tr>
+        <tr><td>具體標準</td><td>告訴 AI 格式、風格、禁止事項</td></tr>
+        <tr><td>允許提問</td><td>讓 AI 先問清楚再回答</td></tr>
+    </table>
+</section>
+
+<!-- AI 三大缺陷 -->
+<section>
+    <h2>AI 的三個關鍵缺陷</h2>
+    <div class="two-col">
+        <div>
+            <h3>缺陷一：沒有 Common Sense</h3>
+            <p>不知道「大家都知道的事」，會在明顯處犯錯</p>
+        </div>
+        <div>
+            <h3>缺陷二：容易幻覺</h3>
+            <p>一本正經胡說八道，捏造數字和出處</p>
+        </div>
+    </div>
+    <p style="margin-top: 1em;"><span class="highlight">缺陷三：不知道你的具體情況</span> — 你不給 Context，它就給你「普羅大眾」的答案</p>
+</section>
+
+<!-- 任務委派 -->
+<section>
+    <h2>任務委派：什麼該交給 AI？</h2>
+    <table>
+        <tr><th>任務類型</th><th>AI 適合度</th><th>你的角色</th></tr>
+        <tr><td>資訊蒐集/彙整</td><td>⭐⭐⭐⭐⭐</td><td>檢視事實</td></tr>
+        <tr><td>初稿生成</td><td>⭐⭐⭐⭐</td><td>提供框架</td></tr>
+        <tr><td>創意發想</td><td>⭐⭐⭐</td><td>收斂選擇</td></tr>
+        <tr><td>決策建議</td><td>⭐⭐</td><td>人類決定</td></tr>
+        <tr><td>複雜人際</td><td>⭐</td><td>不要用</td></tr>
+    </table>
+</section>
+
+<!-- OKR 指令 -->
+<section>
+    <h2>OKR 指令法</h2>
+    <p>一個好的 AI 指令 = OKR</p>
+    <div class="two-col">
+        <div>
+            <h3>O（Objective）= 目標</h3>
+            <p>「我要這篇文章用來做什麼？」</p>
+        </div>
+        <div>
+            <h3>KR（Key Results）= 可量化標準</h3>
+            <ul class="small-text">
+                <li>讀者是誰？</li>
+                <li>長度？</li>
+                <li>風格？</li>
+                <li>禁止什麼？</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 四種指令模板 -->
+<section>
+    <h2>四種常見指令模板</h2>
+    <table>
+        <tr><th>類型</th><th>關鍵要素</th></tr>
+        <tr><td>商業報告</td><td>讀者 + 長度 + 風格 + Call to Action</td></tr>
+        <tr><td>創意發想</td><td>數量 + 角度 + 目標受眾</td></tr>
+        <tr><td>郵件撰寫</td><td>對象 + 目的 + 語氣 + 禁止事項</td></tr>
+        <tr><td>翻譯潤稿</td><td>風格 + 專有名詞處理 + 長度</td></tr>
+    </table>
+</section>
+
+<!-- AI 等級分工 -->
+<section>
+    <h2>AI 等級分工：用對 AI，省錢又高效</h2>
+    <table>
+        <tr><th>等級</th><th>適合場景</th></tr>
+        <tr><td>旗艦級</td><td>複雜分析、策略建議、關鍵決策</td></tr>
+        <tr><td>主力級</td><td>日常任務、資訊處理、翻譯</td></tr>
+        <tr><td>專門級</td><td>圖片生成、語音轉文字</td></tr>
+        <tr><td>輔助級</td><td>簡單任務、快速草稿</td></tr>
+    </table>
+    <p class="highlight">原則：用「主力級」處理 80%，旗艦級處理 20%</p>
+</section>
+
+<!-- 工作流設計 -->
+<section>
+    <h2>Prompt 工作流設計</h2>
+    <h3>三個層次</h3>
+    <ol>
+        <li><strong>模板：</strong>把常見任務寫成填空式模板</li>
+        <li><strong>工作流：</strong>複雜任務分階段給</li>
+        <li><strong>反饋循環：</strong>AI 回答 → 你審核 → 修正 → 直到滿意</li>
+    </ol>
+    <p class="highlight" style="margin-top: 1em;">每個好結果，問一句：「這個能當模板嗎？」</p>
+</section>
+
+<!-- 知識管理 -->
+<section>
+    <h2>AI 記憶分層管理</h2>
+    <table>
+        <tr><th>層次</th><th>內容</th><th>使用時機</th></tr>
+        <tr><td>系統層</td><td>你的產業、職業、溝通風格</td><td>每個新對話</td></tr>
+        <tr><td>任務層</td><td>各任務的標準 Prompt</td><td>執行該類任務時</td></tr>
+        <tr><td>專案層</td><td>專案的目標、約束、已知決策</td><td>處理該專案時</td></tr>
+    </table>
+</section>
+
+<!-- 品質管理 -->
+<section>
+    <h2>AI 輸出品質管理</h2>
+    <h3>四維度審核框架</h3>
+    <table>
+        <tr><th>維度</th><th>檢查問題</th></tr>
+        <tr><td>準確性</td><td>數字有事實依據嗎？</td></tr>
+        <tr><td>相關性</td><td>回答有針對我的問題嗎？</td></tr>
+        <tr><td>完整性</td><td>有遺漏重要維度嗎？</td></tr>
+        <tr><td>可執行性</td><td>建議的內容實際可行嗎？</td></tr>
+    </table>
+</section>
+
+<!-- 風險管理 -->
+<section>
+    <h2>AI 風險管理：三條線</h2>
+    <div class="two-col">
+        <div>
+            <h3>資訊分級</h3>
+            <ul class="small-text">
+                <li>公開 → 內部 → 機密 → 極機密</li>
+            </ul>
+        </div>
+        <div>
+            <h3>外流檢查清單</h3>
+            <ul class="small-text">
+                <li>數字有驗證嗎？</li>
+                <li>有競爭風險嗎？</li>
+                <li>有人類把關嗎？</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 持續改善 -->
+<section>
+    <h2>持續改善：雙軌 PDCA</h2>
+    <div class="two-col">
+        <div>
+            <h3>Prompt PDCA</h3>
+            <ul class="small-text">
+                <li>P：設計 Prompt</li>
+                <li>D：執行並觀察輸出</li>
+                <li>C：檢查輸出品質</li>
+                <li>A：根據結果修正 Prompt</li>
+            </ul>
+        </div>
+        <div>
+            <h3>AI 策略 PDCA</h3>
+            <ul class="small-text">
+                <li>P：規劃哪些任務用 AI</li>
+                <li>D：執行並記錄效果</li>
+                <li>C：評估節省時間、輸出品質</li>
+                <li>A：調整 AI 使用策略</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 實踐路線圖 -->
+<section>
+    <h2>實踐路線圖</h2>
+    <table>
+        <tr><th>階段</th><th>時間</th><th>重點</th></tr>
+        <tr><td>建立基礎</td><td>1-10 天</td><td>會員卡、身份卡、分類任務</td></tr>
+        <tr><td>系統化</td><td>11-30 天</td><td>模板庫、流程固化、工具箱</td></tr>
+        <tr><td>持續優化</td><td>30 天+</td><td>定期檢視、迭代改善</td></tr>
+    </table>
+</section>
+
+<!-- 總結 -->
+<section>
+    <h2>這本書教會你的</h2>
+    <p class="highlight" style="font-size: 1.2em;">標準比工具重要，系統思維強過工具思維</p>
+    <ul style="margin-top: 1em;">
+        <li>把 AI 當人 → 交代清楚背景和標準</li>
+        <li>任務委派判斷 → 什麼該交給 AI</li>
+        <li>OKR 指令 → 目標 + 關鍵成果</li>
+        <li>分層管理 → 系統/任務/專案</li>
+        <li>持續改善 → PDCA 迭代</li>
+    </ul>
+</section>
+
+<!-- 討論時間 -->
+<section>
+    <h2>討論時間</h2>
+    <p>你現在對 AI 的使用方式，比較接近哪種？</p>
+    <ul>
+        <li>A. 靈感發電型 — 想問什麼就問什麼</li>
+        <li>B. 萬能許願型 — 一次給一堆，期待 AI 自己懂</li>
+        <li>C. 半信半疑型 — AI 說的都當參考，自己重新檢查</li>
+    </ul>
+    <p style="margin-top: 1.5em;">你打算怎麼改變？</p>
+</section>
+
+<!-- 行動清單 -->
+<section>
+    <h2>行動清單</h2>
+    <ol>
+        <li>建立你的「AI 身份卡」— 告訴 AI 你是誰、要什麼</li>
+        <li>選擇一個每週都做的任務，建立 Prompt 模板</li>
+        <li>用 BCG 矩陣重新分類你的工作任務</li>
+        <li>養成「分段交付」的習慣</li>
+        <li>每個好結果問：「這個能當模板嗎？」</li>
+    </ol>
+</section>
+
+<!-- 結束 -->
+<section class="cover">
+    <h1>謝謝</h1>
+    <p>AI 管理學：用管理框架馭 AI 能力</p>
+    <p style="margin-top: 2em;">草台班子研究室</p>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script>
+    Reveal.initialize({ hash: true, slideNumber: true });
+</script>
+</body>
+</html>
