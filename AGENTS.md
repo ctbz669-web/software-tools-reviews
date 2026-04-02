@@ -8,16 +8,24 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 ## Session Startup
 
-Before doing anything else:
+**Priority order — read in this sequence, stop when context is sufficient:**
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Read `MEMORY.md` — long-term memory, must load
+### 1. MUST (every time, main session)
+- `MEMORY.md` — long-term memory, always load in main session
+- `memory/YYYY-MM-DD.md` — today's memory (create if not exists)
+- `memory/YYYY-MM-DD.md` — yesterday's memory (if exists)
 
-Don't ask permission. Just do it.
+### 2. IF NEEDED (when context is unclear or first interaction)
+- `USER.md` — who's asking?
+- `SOUL.md` — who am I?
 
-**Important:** MEMORY.md must be loaded in every main session. This is not optional.
+### 3. ON DEMAND (when working on specific project)
+- `projects/*/memory.md` or relevant project notes
+- Use `memory_search` for past events
+
+**Do NOT read everything upfront.** Read minimum, search on demand.
+
+**Rule:** If Kevin asks about something specific, search memory first before assuming.
 
 ## Memory
 
@@ -211,22 +219,61 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
-## 📅 Daily Publishing SOP
+## 📅 Daily Publishing SOP（正式版）
 
-When Kevin asks to "publish" or "record" a daily diary:
+### 觸發詞
+當 Kevin 說：「紀錄日記」、「寫日記」、「更新今天的日記」
 
-1. **Write to all three places:**
-   - `memory/YYYY-MM-DD.md` — raw daily log
-   - `projects/caotaibanzi-media/content/daily/YYYY-MM-DD.md` — content pipeline log
-   - `site/daily/YYYY-MM-DD/index.html` — public webpage
+### 流程（嚴格順序）
 
-2. **Sync to Obsidian vault:**
-   - Path: `/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/`
-   - File: `YYYY-MM-DD.md`
-   - This is **mandatory** — do not skip this step
+**Step 1. 先寫 Obsidian 內部完整版（最重要）**
+- 路徑：`/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/YYYY-MM-DD.md`
+- 要求：比網站版更詳細，完整記錄：
+  - 當天做了什麼
+  - 發生了哪些錯誤/問題
+  - 怎麼解決
+  - 關鍵決策
+  - 內部脈絡
+  - 敏感但值得留檔的資訊
 
-3. **Git commit and push:**
-   - `git add . && git commit -m "Add YYYY-MM-DD daily diary" && git push`
+**Step 2. 再整理網站公開版**
+- 來源：從 Obsidian 版整理
+- 原則：刪除敏感資訊，保留對外有價值的內容
+- 輸出：HTML 放在 `site/daily/YYYY-MM-DD/index.html`
+
+**Step 2.5. 檢查品牌形象資產（如果首頁有變更）**
+- Logo 必須是 PNG 格式（透明背景）
+- Brand-hero 需要壓縮（建議 1500px 寬，80% 品質）
+- 如果要更新圖片，先確認格式正確再部署
+
+**Step 3. 發布到網站**
+- 使用 wrangler 直接部署（繞過 GitHub hook）：
+  ```bash
+  CLOUDFLARE_ACCOUNT_ID=fe517553706a3fa550fa0216cb18393f wrangler pages deploy site/ --project-name caotaibanzi-media --branch main
+  ```
+- 注意：wrangler deploy 會用本地 site/ 內容覆蓋 Cloudflare Pages，所以 Git 裡的圖片必須是正確版本
+
+**Step 3. 發布到網站**
+- 使用 wrangler 直接部署（繞過 GitHub hook）：
+  ```bash
+  CLOUDFLARE_ACCOUNT_ID=fe517553706a3fa550fa0216cb18393f wrangler pages deploy site/ --project-name caotaibanzi-media --branch main
+  ```
+
+### 禁止事項
+- ❌ 不要先寫網站版，再補 Obsidian 版
+- ❌ 不要把私人內容原封不動發到網站
+- ❌ 不要漏記錯誤與解法
+
+### 驗收清單（每次都要檢查）
+- [ ] Obsidian 版已更新（比網站版更詳細）
+- [ ] 網站版已去敏感
+- [ ] 網站首頁已出現入口
+- [ ] Logo 是 PNG 格式（透明背景）
+- [ ] Brand-hero 已壓縮
+- [ ] wrangler deploy 成功
+
+### 網站 repo 路徑
+`/Volumes/WorkData/ctbzai/projects/caotaibanzi-media/`
 
 ## Make It Yours
 
