@@ -1,11 +1,16 @@
 # HEARTBEAT.md
 
-## 多 session 日記同步原則（重要）
-如果有多個 session 同時在工作（例：Telegram + Discord），每個 session 結束前應將重要產出寫進 canonical 日記檔：
-- `memory/YYYY-MM-DD.md`（每日 memory）
+## 團隊日記原則（重要）
+日記是**團隊共享的**，不是單一 agent 的私人筆記。每個 agent（任何 session、任何 channel）在完成重要工作後，都應主動寫進 canonical 日記：
+- `memory/YYYY-MM-DD.md`
 - Obsidian diary：`/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/YYYY-MM-DD.md`
 
-這樣另一個 session 在下次啟動時讀到當日 memory，就能接上上下文。
+**記錄原則**：
+- 記「團隊做了什麼」，不只記「我做了什麼」
+- 包含：重要決策、產出、問題與解法、待辦更新
+- 完成工作後馬上寫，不要等到 session 結束才補
+
+這樣任何 agent 下次啟動時，讀到當日團隊日記就能快速掌握完整上下文。
 
 ---
 

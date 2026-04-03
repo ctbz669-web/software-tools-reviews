@@ -167,11 +167,12 @@ openclaw message send --channel telegram --target 605187761 --media "docs/ai-man
 
 ---
 
-## 多 session 協作與日記同步
-- 多個 session（Telegram、Discord 等）可能同時在工作
-- 每個 session 應將重要產出寫進 canonical 日記檔，確保其他 session 能讀到
+## 團隊協作與共享日記原則
+- 日記是**團隊的日記**，不是任何單一 agent 或 session 的私人記錄
+- 所有 agent（無論哪個 session、哪個 channel）都應將自己的工作產出寫進同一份 canonical 日記
+- 這樣任何 agent 在任何時候啟動，都能透過讀取當日團隊日記，快速掌握團隊整體進度
 - Canonical 日記路徑：
-  - `memory/YYYY-MM-DD.md`
+  - `memory/YYYY-MM-DD.md`（團隊記憶主檔）
   - Obsidian：`/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/YYYY-MM-DD.md`
 
 ---
