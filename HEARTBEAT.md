@@ -1,5 +1,14 @@
 # HEARTBEAT.md
 
+## 多 session 日記同步原則（重要）
+如果有多個 session 同時在工作（例：Telegram + Discord），每個 session 結束前應將重要產出寫進 canonical 日記檔：
+- `memory/YYYY-MM-DD.md`（每日 memory）
+- Obsidian diary：`/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/YYYY-MM-DD.md`
+
+這樣另一個 session 在下次啟動時讀到當日 memory，就能接上上下文。
+
+---
+
 ## Startup Self-Check (每次 session 開始時執行)
 
 ```markdown

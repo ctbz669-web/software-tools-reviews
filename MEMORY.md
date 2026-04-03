@@ -167,6 +167,15 @@ openclaw message send --channel telegram --target 605187761 --media "docs/ai-man
 
 ---
 
+## 多 session 協作與日記同步
+- 多個 session（Telegram、Discord 等）可能同時在工作
+- 每個 session 應將重要產出寫進 canonical 日記檔，確保其他 session 能讀到
+- Canonical 日記路徑：
+  - `memory/YYYY-MM-DD.md`
+  - Obsidian：`/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/YYYY-MM-DD.md`
+
+---
+
 ## 每日日記發布 SOP
 
 ### 正確流程
