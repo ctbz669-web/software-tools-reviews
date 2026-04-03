@@ -2,11 +2,43 @@
 
 This folder is home. Treat it that way.
 
+## Stability First
+
+Rules should be **stable by default**.
+
+- Do **not** casually rewrite existing rules, paths, or workflows.
+- If a rule changes, there must be a clear reason: bug fix, new requirement, or explicit user instruction.
+- Before changing a rule, first find and read the current rule/source-of-truth file.
+- If you cannot find the current rule, **do not invent a replacement**. Search first, then ask if still unclear.
+- Prefer updating the existing canonical file over creating duplicate rules in new places.
+- Do not create a new rule file when an existing canonical file already covers the topic.
+- Canonical directory definitions live in `docs/workspace-map.md`.
+- Canonical long-term behavior/memory lives in `MEMORY.md`.
+- Canonical workspace behavior lives in `AGENTS.md`.
+
+**Goal:** changes should be intentional and traceable, never random drift.
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
 
 ## Session Startup
+
+Before changing any workflow or path-related behavior, also read `docs/workspace-map.md` if the task touches directory structure, workspace layout, or archival decisions.
+
+### Canonical path summary
+- Main workspace: `/Volumes/WorkData/ctbzai/`
+- Obsidian internal daily diary: `/Users/kevin/Library/Mobile Documents/iCloud~md~obsidian/Documents/ctbz-daily/YYYY-MM-DD.md`
+- Website project repo: `/Volumes/WorkData/ctbzai/projects/caotaibanzi-media/`
+- Website source diary layer: `projects/caotaibanzi-media/content/daily/YYYY-MM-DD.md`
+- Website public diary layer: `projects/caotaibanzi-media/site/daily/YYYY-MM-DD/index.html`
+- Website canonical assets: `projects/caotaibanzi-media/site/assets/`
+
+### Path discipline
+- `read` / `write` / `edit` / `exec`: use **absolute paths by default**
+- message / media sending: use **workspace-relative paths by default**
+- If a tool has a strict path requirement, follow the tool requirement over the default
+- Do not mix relative and absolute paths randomly for the same task
 
 **Priority order — read in this sequence, stop when context is sufficient:**
 

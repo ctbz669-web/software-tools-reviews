@@ -1,0 +1,24 @@
+# Secrets
+.env
+.openclaw/
+secrets.json
+credentials/
+
+# Local backups / temp
+*.bak
+*.tmp
+.backups/
+
+# Temp / runtime
+.runtime/
+.wrangler/
+.clawhub/
+tmp/
+temp/
+
+# Archives and generated clutter
+archived/
+
+# macOS / editors
+.DS_Store
+*.swp

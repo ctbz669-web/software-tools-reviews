@@ -17,6 +17,7 @@ _Only keep durable rules, stable preferences, and repeated decisions here._
 | 檔案驗收 | ## 檔案操作二次確認規則 |
 | 工作目錄 | ## 工作檔案儲存規則 |
 | 日記發布 | ## 每日日記發布 SOP |
+| 專案記憶 | ## 專案記憶 |
 
 ---
 
@@ -59,6 +60,13 @@ _Only keep durable rules, stable preferences, and repeated decisions here._
 
 ## Video
 - Subtitles should be **at most 2 lines**.
+
+---
+
+## Path Discipline
+- `read` / `write` / `edit` / `exec` → use absolute paths by default
+- message / media sending → use workspace-relative paths by default
+- Only break this rule if a specific tool requires a different format
 
 ---
 
@@ -165,36 +173,15 @@ CLOUDFLARE_ACCOUNT_ID=fe517553706a3fa550fa0216cb18393f wrangler pages deploy sit
 
 ---
 
-## 專案
+## 專案記憶
 
-### 《AI 管理學》
-- **位置：** `/Volumes/WorkData/ctbzai/docs/ai-management-book/`
-- **PDF：** `book.pdf` (1.7MB)
-- **完成度：** 98%，12 章全部完成（約 110,000 中文字）
-- **核心框架（10 個）：**
-  1. 把 AI 當人 → Ch1
-  2. 任務委派判斷 → Ch3
-  3. OKR 指令 → Ch4
-  4. AI 等級分工（旗艦/主力/專門/輔助）→ Ch5
-  5. 工具選擇邏輯 → Ch6
-  6. 每個好結果問模板 → Ch7
-  7. AI 生長記憶 Context → Ch8
-  8. AI 檢查 AI → Ch9
-  9. 認知邊界 → Ch12
-  10. 系統思維 > 工具思維 → Ch1 & Ch12
-
-### 網站狀態
+### caotaibanzi-media
+- 專案記憶：`projects/caotaibanzi-media/memory.md`
 - GitHub: https://github.com/ctbz669-web/caotaibanzi-media
 - 網站: https://daily.ctbzai.com
-- 部署方式: Cloudflare Pages (連接 GitHub)
 
-### Logo 和品牌形象資產
-- **Logo 格式**：必須是 PNG 才能透明背景
-- **品牌 Hero 圖**：需要先壓縮（建議 1500px 寬，80% 品質）
-- **圖片路徑**：
-  - Logo: `site/assets/logo-master.png`
-  - Brand-hero: `site/assets/brand-hero.jpg`
-- **重要**：wrangler deploy 會用 Git 內容覆蓋 Cloudflare Pages，canonical 圖片必須存在 Git 裡
+### 《AI 管理學》
+- 專案記憶：`docs/ai-management-book/memory.md`
 
 ---
 
