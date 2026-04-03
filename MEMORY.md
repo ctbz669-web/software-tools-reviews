@@ -59,7 +59,8 @@ _Only keep durable rules, stable preferences, and repeated decisions here._
 - 兩邊分工清楚，互不干擾
 
 ### Kimi（已退出日常使用）
-- **問題**：kimi/kimi-code 和 kimi-coding/k2p5 有空參數 bug（tool call 收到 `{"command":""}` 空字串）
+- **問題**：`kimi/kimi-code` 有空參數 bug（tool call 收到 `{"command":""}` 空字串）
+- **補充**：Kimi K2.5 本身是原生多模態模型（支援 text + image + video），但我們當時用的可能是 K2（純文字版）
 - **PR 狀態**：OpenClaw PR #50152 和 #44888 尚未 merge
 - **目前狀態**：保留手動使用，不在 fallback 列表
 
