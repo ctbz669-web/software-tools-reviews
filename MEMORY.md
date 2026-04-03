@@ -114,6 +114,15 @@ openclaw message send --channel telegram --target 605187761 --media "docs/ai-man
 
 ---
 
+## Workspace 整理核心規則
+- **工作產生的文件要保留**：成果物、專案素材、歷史輸出、review 交付，不要因為整理而隨手刪除
+- **不在活躍位置的工作文件，優先歸檔**：若不再活躍但仍有價值，移到 `archived/` 或對應專案的歷史資料夾
+- **配置文件只保留一份 canonical**：config、state、rules、secrets source 不要多處並存
+- **遇到重複配置時，先讀再整合**：把必要內容合併進 canonical 檔案，再刪掉重複來源
+- **避免多個 source of truth**：規則、配置、狀態檔不能平行存在多份版本
+
+---
+
 ## 工作檔案儲存規則
 
 ### 主要儲存位置
