@@ -36,11 +36,32 @@ _Only keep durable rules, stable preferences, and repeated decisions here._
 ---
 
 ## Models
-**2026-04-03 更新**：Kimi 有空參數 bug（tool call 收到 `{"command":""}` 空字串），所有 agent 已改用 `minimax/MiniMax-M2.7`。
 
-- **問題**：kimi/kimi-code 和 kimi-coding/k2p5 都有問題
+### MiniMax 雙模型架構（2026-04-03 更新）
+
+#### 文字處理：MiniMax-M2.7
+- `minimax/MiniMax-M2.7`
+- 純文字輸入輸出，無 vision 能力
+- 用途：對話、reasoning、tool calling、寫程式
+- API endpoint：`https://api.minimaxi.com/anthropic`
+
+#### 多模態生成：minimax-multimodal skill
+- Skill 位置：`~/.agents/skills/minimax-multimodal/`
+- 用途：圖片生成、影片生成、音樂生成、語音合成（TTS）、語音克隆
+- API：獨立的 MiniMax 多模態 API（不同於文字 API）
+- 輸出目錄：工作目錄的 `minimax-output/`
+- 環境需求：ffmpeg、jq、MINIMAX_API_KEY、MINIMAX_API_HOST、MINIMAX_TTS_API_KEY
+- 腳本：`scripts/image/`、`scripts/video/`、`scripts/music/`、`scripts/tts/`、`scripts/media_tools.sh`
+
+#### 架構原則
+- 文字模型只管文字處理
+- 多模態生成交給專門 skill
+- 兩邊分工清楚，互不干擾
+
+### Kimi（已退出日常使用）
+- **問題**：kimi/kimi-code 和 kimi-coding/k2p5 有空參數 bug（tool call 收到 `{"command":""}` 空字串）
 - **PR 狀態**：OpenClaw PR #50152 和 #44888 尚未 merge
-- **解法**：切換到 MiniMax-M2.7
+- **目前狀態**：保留手動使用，不在 fallback 列表
 
 ### Agent 模型設定
 - 所有 12 個 agent 的 primary model 已改為 `minimax/MiniMax-M2.7`

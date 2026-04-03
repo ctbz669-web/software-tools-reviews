@@ -35,6 +35,10 @@ Canonical daily memory files (`YYYY-MM-DD.md`). Raw chronological memory log.
 Archived legacy OpenClaw workspace materials, outputs, metadata, and recovery history. Not active.
 - This replaced the old root-level `openclaw-workspace-legacy/` shell after full archival cleanup.
 
+### `minimax-output/`
+Generated media from the MiniMax multimodal skill (image, video, music, TTS outputs).
+- Created by the `minimax-multimodal` skill, not git-tracked.
+
 ### `outputs/`
 General generated outputs that do not belong to a more specific project directory.
 - Use this for broad/generated outputs that are not tied to one dedicated project repo.
