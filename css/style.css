@@ -201,6 +201,30 @@ nav a:hover { color: var(--primary); }
   font-style: italic;
 }
 
+/* Inline CTA (mid-article) */
+.inline-cta {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.inline-cta .cta-btn {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+.inline-cta .cta-note {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.inline-cta .cta-note a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 /* Footer */
 .site-footer {
   background: var(--bg-alt);
