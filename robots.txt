@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ctbz669-web.github.io/software-tools-reviews/sitemap.xml
